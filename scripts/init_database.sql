@@ -1,3 +1,5 @@
+/*
+*/
 USE master;
 GO
 --Drop and re-create the 'DataWarehouse' database
@@ -7,8 +9,13 @@ BEGIN
 	DROP DATABASE DataWarehouse;
 END;
 GO
+--create database: DataWarehouse	
 CREATE DATABASE DataWarehouse;
+
+--switch to DataWarehouse from master
 USE DataWarehouse;
+
+--create Schema: bronze, silver, and gold (medallion architecture)
 CREATE SCHEMA bronze;	
 GO
 CREATE SCHEMA silver;
